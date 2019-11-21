@@ -1,0 +1,44 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} About Us{% endblock %}
+{% block body %}
+    
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModal">Login using your credentials</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    
+                <div class="modal-body">
+                    <form action="/profile/login" method='post'><input type="hidden" name="csrfmiddlewaretoken" value="Jfi9iBBBaRURTfQNOfemREa1BrpZREiOJq5iihyrtYc5ODdAvQKu5uqz03FpXA0A">
+                        <div class="form-group">
+                            <label for="lusername">Username</label>
+                            <input type="name" class="form-control" id="luname" placeholder="Enter your username"
+                                name="uname">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="lpassword" placeholder="Enter your password"
+                                name="password">
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdvcqwUAAAAACmPYNVoiJA7D84xLSQQt5g9p10m"></div>
+                        <input type="hidden" name="path" value="/videos/python-django-tutorials-hindi-0">
+    
+                        <button type="submit" class="btn btn-danger mt-2" id="loginsubmit">Login</button>
+                    </form>
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
